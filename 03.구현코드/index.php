@@ -16,9 +16,7 @@
     <script src="./js/linksys.js"></script>
 </head>
 <body>
-    <div id="toparea">
-        <header class="toparea ibx comarea"></header>
-    </div>
+    <?php include "inc/toparea.inc" ?>
     <div id="mainarea">
         <main class="mainarea ibx">
             <section class="pt1">
@@ -87,9 +85,7 @@
             </section>
         </main>
     </div>
-    <div id="footarea">
-        <footer class="footarea ibx comarea"></footer>
-    </div>
+    <?php include "inc/footarea.inc" ?>
      <!-- 위로가기버튼 -->
      <a href="#" class="tbtn fi fi-angle-up">
         <span class="ir">위로가기버튼</span>
