@@ -146,8 +146,26 @@ $('#btnj').click((a)=>{
         $('.logF').submit()//original post
         /*
         ajax post
-        ajax=async js and xml 
+        ajax=async js and xml
+        async=part of the page was connected to server without reload
+        $.post(URL,data,callback) 
          */
+        $.post('process/inc.php',{
+            // 1.아이디
+            'mid' : $("#mid").val(),
+            // 2.비번
+            'mpw' : $("#mpw").val(),
+            // 3.이름
+            'mnm' : $("#mnm").val(),
+            // 4.성별
+            'gen' : $(":radio[name=gen]:checked").val(),
+            // 5-1.이메일 앞주소
+            'email1' : $("#email1").val(),
+            // 5-2.이메일 뒷주소
+            'seleml' : $("#seleml").val(),
+            // 5-3.직접입력 이메일 뒷주소
+            'email2' : $("#email2").val(),
+        },)
         // alert('🎊가입을 추콰드립니돠🎊')
         // location.replace('login.php')
     }else alert('수정해라!!!')
