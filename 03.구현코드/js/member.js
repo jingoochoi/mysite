@@ -143,8 +143,9 @@ $('#btnj').click((a)=>{
     pass=true
     $(`form.logF input[type=text][id!=email2],form.logF input[type=password]`).trigger('blur')
     if (pass) {
-        alert('🎊가입을 추콰드립니돠🎊')
-        location.replace('login.php')
+        $('.logF').submit()
+        // alert('🎊가입을 추콰드립니돠🎊')
+        // location.replace('login.php')
     }else alert('수정해라!!!')
 })
 /*////////////////////////////////////////////////////////
