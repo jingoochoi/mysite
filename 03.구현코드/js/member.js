@@ -143,14 +143,14 @@ $('#btnj').click((a)=>{
     pass=true
     $(`form.logF input[type=text][id!=email2],form.logF input[type=password]`).trigger('blur')
     if (pass) {
-        $('.logF').submit()//original post
+        // $('.logF').submit()//original post
         /*
         ajax post
         ajax=async js and xml
         async=part of the page was connected to server without reload
         $.post(URL,data,callback) 
          */
-        $.post('process/inc.php',{
+        $.post('process/ins.php',{
             // 1.아이디
             'mid' : $("#mid").val(),
             // 2.비번
@@ -165,9 +165,13 @@ $('#btnj').click((a)=>{
             'seleml' : $("#seleml").val(),
             // 5-3.직접입력 이메일 뒷주소
             'email2' : $("#email2").val(),
-        },)
-        // alert('🎊가입을 추콰드립니돠🎊')
-        // location.replace('login.php')
+        },function (a) {
+            if (a==='ok') {
+                // 
+                alert('🎊가입을 추콰드립니돠🎊')
+                // location.replace('login.php')
+            }else alert(a)
+        })
     }else alert('수정해라!!!')
 })
 /*////////////////////////////////////////////////////////
