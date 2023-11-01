@@ -62,9 +62,9 @@
                             <li>
                                 <span class="itit">성별</span>
                                 <label for="gen1">남성</label>
-                                <input type="radio" name="gen" id="gen1" checked />
+                                <input type="radio" name="gen" id="gen1" value="m" checked />
                                 <label for="gen2">여성</label>
-                                <input type="radio" name="gen" id="gen2"  />
+                                <input type="radio" name="gen" id="gen2" value="w"  />
                                 <!-- 라디오버튼의 name 속성을
                             같은 이름으로 쓰면 그룹핑되어
                             하나만 선택된다! 
