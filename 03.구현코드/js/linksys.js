@@ -48,7 +48,7 @@ $(()=>{
             default:
                 break;
         }
-        if (tit1=='로그인'||tit1=='회원가입'||tit1=='갤러리') {
+        if (tit1=='로그인'||tit1=='회원가입'||tit1=='갤러리'||tit1=='로그아웃') {
             location.href=url+'.php'
         }
         open(url)
