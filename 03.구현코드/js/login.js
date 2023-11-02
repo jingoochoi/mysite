@@ -25,7 +25,23 @@ $('#sbtn').click(function (a) {
         $('#mid').val('').focus()
         $('#mpw').val('')
     }else{
-        alert('로그인 성공😆')
-        location.replace('index.php')
+        $.post('process/loginSet.php',{
+            'mid':$('#mid').val(),
+            'mpw':$('#mpw').val()
+        },function (a) {
+            if (a=='ok') {
+                alert('로그인 성공😆')
+                location.replace('index.php')
+            }
+            else if (a=='again') {
+                alert('패스워드를 까먹었냐!!!')
+                $('#mpw').val('').focus()
+            }
+            else if (a=='no') {
+                alert('아이디 까먹었냐!!!')
+                $('#mid').val('').focus()
+                $('#mpw').val('')
+            }
+        })
     }
 })
