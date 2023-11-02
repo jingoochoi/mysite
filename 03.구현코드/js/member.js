@@ -81,7 +81,9 @@ txtf.blur(function () {
                     $('#mid').siblings('.msg').html('바꿔!!!').removeClass('on')
                     // 
                 }
-            }})//async fales=affect to 'pass'
+            },error:function (a,b,c) {
+                alert('연결실패'+c)
+            }})//async false=affect to 'pass'
         }else{
             $(this).siblings('.msg').html('영문자로 시작하는 6~20글자로 입력바람').removeClass('on')
             pass=false
