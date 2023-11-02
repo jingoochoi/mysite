@@ -44,6 +44,9 @@ $(()=>{
             case '갤러리':
                 url='gallery'
                 break;
+            case '로그아웃':
+                url='index'
+                break;
         
             default:
                 break;
