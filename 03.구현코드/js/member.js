@@ -187,7 +187,7 @@ $('#btnj').click((a)=>{
             if (a==='ok') {
                 // 
                 alert('🎊가입을 추콰드립니돠🎊')
-                // location.replace('login.php')
+                location.replace('login.php')
             }else alert(a)
         })
     }else alert('수정해라!!!')
