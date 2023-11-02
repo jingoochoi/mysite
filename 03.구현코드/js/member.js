@@ -78,8 +78,8 @@ txtf.blur(function () {
                     // 
                     $('#mid').siblings('.msg').html('사용가능').addClass('on')
                 }else{
-                    $('#mid').siblings('.msg').html('바꿔!!!').removeClass('on')
-                    // 
+                    $('#mid').siblings('.msg').html('바꿔,중복이라고!!!').removeClass('on')
+                    pass=false
                 }
             },error:function (a,b,c) {
                 alert('연결실패'+c)
