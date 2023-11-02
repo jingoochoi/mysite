@@ -64,8 +64,24 @@ txtf.blur(function () {
     }
     else if ($(this).attr('id')=='mid') {
         if(vReg(gb,$(this).attr('id'))){
-            // 
-            $(this).siblings('.msg').html('사용가능').addClass('on')
+            /*
+            ajax id overriding check
+            1.post
+            $.post(url,data,callback)
+            2.get
+            $.get(url,callback)
+            3.1 or 2 selection
+            $.ajax({page,method,data,datatype,async option,sucess,error})
+             */
+            $.ajax({url:'process/chkID.php',type:'post',data:{'mid':$('#mid').val()},dataType:'html',async:false,success:function (a) {
+                if (a=='ok') {
+                    // 
+                    $('#mid').siblings('.msg').html('사용가능').addClass('on')
+                }else{
+                    $('#mid').siblings('.msg').html('바꿔').removeClass('on')
+                    // 
+                }
+            }})//async fales=affect to 'pass'
         }else{
             $(this).siblings('.msg').html('영문자로 시작하는 6~20글자로 입력바람').removeClass('on')
             pass=false
