@@ -16,6 +16,7 @@
     <script src="./js/linksys.js"></script>
 </head>
 <body>
+    <?php include "inc/loginsess.inc" ?>
     <?php include "inc/toparea.inc" ?>
     <div id="mainarea">
         <main class="mainarea ibx">
