@@ -19,6 +19,7 @@
     <script src="./js/linksys.js"></script>
 </head>
 <body>
+<?php include "inc/loginsess.inc" ?>
     <div id="toparea">
         <header class="toparea ibx comarea"></header>
     </div>
